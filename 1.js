@@ -1,7 +1,7 @@
-function findFirstRepeated(gifts) {
-  let repeat = {}
-  for(const id of gifts){
-    if(repeat[id]) return id
+function findFirstRepeated (gifts) {
+  const repeat = {}
+  for (const id of gifts) {
+    if (repeat[id]) return id
     repeat[id] = 1
   }
   return -1
