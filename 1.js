@@ -1,10 +1,18 @@
+// function findFirstRepeated (gifts) {
+//   const repeat = {}
+//   for (const id of gifts) {
+//     if (repeat[id]) return id
+//     repeat[id] = 1
+//   }
+//   return -1
+// }
+
 function findFirstRepeated (gifts) {
-  const repeat = {}
-  for (const id of gifts) {
-    if (repeat[id]) return id
-    repeat[id] = 1
-  }
-  return -1
+  const seen = new Set()
+  // añade primero el item y después comprueba su tamaño
+  // si después de añadir el item, el tamaño es el mismo
+  // quiere decir que ese item es el repetido
+  return gifts.find(item => seen.size === seen.add(item).size) ?? -1
 }
 
 const giftIds = [2, 1, 3, 5, 3, 2]
