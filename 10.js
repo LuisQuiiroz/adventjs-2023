@@ -5,7 +5,7 @@ function createChristmasTree (ornaments, height) {
   for (let i = 1; i <= height; i++) {
     const spaces = ' '.repeat(height - i)
     const ornamentsLine = Array.from({ length: i }, () => ornaments[ornamentIndex++ % ornaments.length])
-    console.log(ornamentsLine)
+    // console.log(ornamentsLine)
     tree.push(`${spaces}${ornamentsLine.join(' ')}`)
   }
 
