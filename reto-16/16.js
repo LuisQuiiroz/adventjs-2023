@@ -18,4 +18,4 @@ function transformTree (tree) {
   return res
 }
 
-transformTree([1, 2, 3, 4, 5])
+console.log(transformTree([1, 2, 3, 4, 5]))
